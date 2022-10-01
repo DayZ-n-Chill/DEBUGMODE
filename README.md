@@ -26,7 +26,7 @@ This is a folder that will contain all the server files for Experimental Servers
 This is a folder that will contain all the server files for Vanilla Servers. It hosts folders with all of your differnt servers missions,configs, and profiles. 
 
 ## How to install
-Download or clone this repository to your DayZ Root Folder. Commonly located in C:\Program Files (x86)\Steam\steamapps\common\DayZ
+Download or clone this repository to your DayZ Root Folder. Commonly located in C:\Program Files (x86)\Steam\steamapps\common\DayZ, For Experimental Servers install in the folders C:\Program Files (x86)\Steam\steamapps\common\DayZ Exp and switch to, or use the Experimental Branch in this repo.
 
 After that you will can edit the server configs in each example to fit your needs. Duplicate each example to make more servers.
 
