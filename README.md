@@ -1,7 +1,6 @@
 ![alt text](https://cdn.discordapp.com/attachments/437517561568165898/1025826887009837126/Debugmode.png)
 # DAYZ DEBUG MODE!
-DayZ Debug Mode is a simple drag and drop system for setting up DayZ Servers on your Local Machine.
-
+DayZ Debug Mode is a simple drag and drop system for setting up DayZ Servers in DIAGNOSTIC MODE on your Local Machine.
 This simple server setup is based on the Documentation provided by boheima on how to setup a server locally. 
 
 ## So what is DEBUG MODE exactly?
@@ -10,7 +9,7 @@ Debug mode is a set of .bat files and a folder structures to replicates the way 
 There are no built in admin tools or extra feature. It is strcitly vanillia dayz until you add your mods to the !Server_Name.bat
 
 ## Why use DEBUG MODE?
-DayZ Debug mode is dayz running in diagnostic mode locally on your machine. If you are working on multiple mods, or you own several servers it can be difficult to manage and maintain your files if you dont have a good base for orginization. Esspecially if you are new to either of these things. This Debug mode focuses on that and creates a consolidated location server to help owners debug logs, and test mod features.
+f you are working on multiple mods, or you own several servers it can be difficult to manage and maintain your files if you dont have a good base for orginization. Esspecially if you are new to either of these things. This Debug mode focuses on that and creates a consolidated location server to help owners debug logs, and test mod features.
 
 ## Whats included?
 A set of icons, and the current mission files for a Experimental server and a Vanilla ones as well. 
