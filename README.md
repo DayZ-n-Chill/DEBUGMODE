@@ -9,7 +9,7 @@ Debug mode is a set of .bat files and a folder structures to replicates the way 
 There are no built in admin tools or extra feature. It is strcitly vanillia dayz until you add your mods to the !Server_Name.bat
 
 ## Why use DEBUG MODE?
-If you are working on multiple mods, or you own several servers it can be difficult to manage and maintain your files if you dont have a good base for orginization. Esspecially if you are new to either of these things. This Debug mode focuses on that and creates a consolidated location server to help owners debug logs, and test mod features.
+DayZ Debug mode is dayz running in diagnostic mode locally on your machine. If you are working on multiple mods, or you own several servers it can be difficult to manage and maintain your files if you dont have a good base for orginization. Esspecially if you are new to either of these things. This Debug mode focuses on that and creates a consolidated location server to help owners debug logs, and test mod features.
 
 ## Whats included?
 A set of icons, and the current mission files for a Experimental server and a Vanilla ones as well. 
