@@ -1,4 +1,4 @@
-![alt text](https://cdn.discordapp.com/attachments/437517561568165898/1025826887009837126/Debugmode.png)
+![DAYZ DEBUG MODE!](https://cdn.discordapp.com/attachments/437517561568165898/1025826887009837126/Debugmode.png)
 # DAYZ DEBUG MODE!
 DayZ Debug Mode is a simple drag and drop system for setting up DayZ Servers in DIAGNOSTIC MODE on your Local Machine.
 This simple server setup is based on the Documentation provided by boheima on how to setup a server locally. 
