@@ -23,7 +23,7 @@ SET "LOCALHOST=127.0.0.1:2302"
 cd ../../../
 
 @REM Start Game
-start DayZDiag_x64.exe -mod=%MODS% -profiles=!ClientDiagLogs -connect=%LOCALHOST% -battleye=0 -filepatching=1
+start DayZServer_x64 -mod=%MODS% -profiles=!ClientDiagLogs -connect=%LOCALHOST% -battleye=0 -filepatching=1
 
 @REM Start The Server 
-start DayZDiag_x64.exe -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
+start DayZServer_x64 -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
