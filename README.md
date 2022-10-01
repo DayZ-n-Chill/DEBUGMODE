@@ -19,12 +19,6 @@ NOTE: Current Mission Files can be updated by downloading DayZ Server and DayZ E
 ### DEBUG Icons  
 A group of optional icons you can use to make the links to your .bat files look a little nicer
 
-### expmissions
-This is a folder that will contain all the server files for Experimental Servers. It hosts folders with all of your differnt servers missions,configs, and profiles. 
-
-### mpmissions
-This is a folder that will contain all the server files for Vanilla Servers. It hosts folders with all of your differnt servers missions,configs, and profiles. 
-
 ## How to install
 Download or clone this repository to your DayZ Root Folder. Commonly located in C:\Program Files (x86)\Steam\steamapps\common\DayZ, For Experimental Servers install in the folders C:\Program Files (x86)\Steam\steamapps\common\DayZ Exp and switch to, or use the Experimental Branch in this repo.
 
