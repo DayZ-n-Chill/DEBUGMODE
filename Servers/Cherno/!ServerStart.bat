@@ -13,6 +13,10 @@ REM of the original code or duplicating files.
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM !!!! IMPORTANT NOTE:   YOU MUST HAVE YOUR P DRIVE SETUP PRIOR TO RUNNING THIS APP    !!!!
+REM -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REM -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 REM !!!! SET UP YOUR MODS HERE !!!!
 REM -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -22,12 +26,12 @@ SET "GAMEDIR=C:\Program Files (x86)\Steam\steamapps\common\DayZ"
 REM Set the location of your Steam !Workshop folder. It is currently set to default
 SET "WorkshopDir=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!Workshop"
 
+REM Set the location of your world
 SET "MISSION=%~d0\DebugMode\Missions\dayzOffline.chernarusplus"
 
 REM List your mods exactly as they are named in your !Workshop folder.
 REM Example: SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@BoomLay's Things"
-
-SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@BoomLay's Things"
+SET "MODLIST="
 
 REM Add your serverside mods here. 
 SET "SEVERSIDEMODS="
