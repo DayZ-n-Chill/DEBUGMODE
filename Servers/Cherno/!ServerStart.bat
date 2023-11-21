@@ -1,7 +1,7 @@
 @echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-type ..\..\Utils\Batch\Logo\devlogo.txt
+type ..\..\Utils\Batch\Utils\devlogo.txt
 SET "WorkshopLink=P:\Mods"
 SET "WorkshopDir=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!Workshop"
 
@@ -32,7 +32,7 @@ IF NOT EXIST "%WorkshopLink%" (
 
 SET "MODS="
 SET "MODDIR=P:\Mods"
-SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@Mod With Spaces;@Another mod on the list"
+SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@Mod With Spaces;@BoomLay's Things"
 
 REM Process each mod in the MODLIST
 :nextmod
@@ -40,17 +40,52 @@ REM Process each mod in the MODLIST
         SET "MOD=%%a"
         SET "MODLIST=%%b"
         SET "MOD_FOLDER=!WorkshopLink!\!MOD!"
-        IF EXIST "!MOD_FOLDER!" (
-            powershell -Command "Write-Host '!MOD!' found in !WorkshopLink! -ForegroundColor Green"
-            SET "MODS=!MODS!!MODDIR!\!MOD!;"
+        SET "MOD_DIR_FOLDER=!MODDIR!\!MOD!"
+
+        REM Check if the mod is in the MODDIR and if the mod name contains a space
+        IF EXIST "!MOD_DIR_FOLDER!" (
+            echo "!MOD!" | findstr /C:" " > nul
+            IF NOT ERRORLEVEL 1 (
+                REM Mod name contains a space, prepare to create a junction with hyphens
+                SET "NEW_MOD=!MOD: =-!"
+                SET "NEW_MOD_FOLDER=!WorkshopLink!\!NEW_MOD!"
+
+                IF NOT EXIST "!NEW_MOD_FOLDER!" (
+                    REM Create a junction only if it does not already exist
+                    mklink /J "!NEW_MOD_FOLDER!" "!MOD_FOLDER!" > nul
+                    IF ERRORLEVEL 1 (
+                        SET "MOD_ERROR=!MOD!"
+                        echo Failed to create junction for "!MOD_ERROR!". Make sure you have the required permissions. >&2
+                    ) ELSE (
+                        SET "MOD_SUCCESS=!MOD!"
+                        powershell -Command "Write-Host 'Junction created successfully.' -ForegroundColor Magenta"
+                        echo "!MOD_SUCCESS!" Successfully linked.
+                        SET "MODS=!MODS!!MODDIR!\!NEW_MOD!;"
+                    )
+                ) ELSE (
+                    SET "MOD_EXISTS=!MOD!"
+                    powershell -Command "Write-Host 'Successfully Loaded.' -ForegroundColor Green"
+                    echo "!MOD_EXISTS!" already exists.
+                    SET "MODS=!MODS!!MODDIR!\!NEW_MOD!;"
+                )
+            ) ELSE (
+                REM Mod name does not contain a space, add it to MODS as is
+                SET "MOD_NO_SPACE=!MOD!"
+                echo "!MOD_NO_SPACE!" found in !WorkshopLink!
+                SET "MODS=!MODS!!MODDIR!\!MOD!;"
+            )
         ) ELSE (
-            powershell -Command "Write-Host '!MOD!' not found in !WorkshopLink! -ForegroundColor Red"
+            SET "MOD_NOT_FOUND=!MOD!"
+            powershell -Command "Write-Host 'Mod not found in "!MODDIR!" - skipping.' -ForegroundColor Red"
+            powershell -Command "Write-Host 'You probably need to download the mod.' -ForegroundColor Blue"
+            echo "!MOD_NOT_FOUND!"
         )
     )
     IF NOT "!MODLIST!"=="" GOTO nextmod
 
 pause
-powershell -Command "Write-Host 'MODS=!MODS!' -ForegroundColor DarkCyan"
+powershell -Command "Write-Host 'Loading Mods and Starting Server' -ForegroundColor DarkCyan"
+echo "MODS=!MODS!"
 pause
 
 SET "SEVERSIDEMODS="
@@ -63,3 +98,6 @@ SET "LOCALHOST=127.0.0.1:2302"
 
 start "" "%GAMEDIR%\DayZDiag_x64.exe" -mod=%MODS% -profiles=%CLIENTLOGS% -connect=%LOCALHOST% -battleye=0 -filepatching=1
 start "" "%GAMEDIR%\DayZDiag_x64.exe" -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
+
+powershell -Command "Write-Host 'ENJOY YOUR SERVER, AND HAPPY MODDING!' -ForegroundColor Green"
+Pause
