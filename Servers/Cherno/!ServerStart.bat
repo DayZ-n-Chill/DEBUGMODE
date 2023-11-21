@@ -61,5 +61,5 @@ SET "MISSION=%~d0\DebugMode\Missions\dayzOffline.chernarusplus"
 SET "GAMEDIR=C:\Program Files (x86)\Steam\steamapps\common\DayZ"
 SET "LOCALHOST=127.0.0.1:2302"
 
-@REM start "" "%GAMEDIR%\DayZDiag_x64.exe" -mod="%MODS%" -profiles=%CLIENTLOGS% -connect=%LOCALHOST% -battleye=0 -filepatching=1
-@REM start "" "%GAMEDIR%\DayZDiag_x64.exe" -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PRO
+start "" "%GAMEDIR%\DayZDiag_x64.exe" -mod=%MODS% -profiles=%CLIENTLOGS% -connect=%LOCALHOST% -battleye=0 -filepatching=1
+start "" "%GAMEDIR%\DayZDiag_x64.exe" -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
