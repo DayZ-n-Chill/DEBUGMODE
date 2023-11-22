@@ -31,7 +31,7 @@ SET "MISSION=%~d0\DebugMode\Missions\dayzOffline.Esseker"
 
 REM List your mods exactly as they are named in your !Workshop folder.
 REM Example: SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@BoomLay's Things"
-SET "MODLIST=@Esseker;@Colorful-ui"
+SET "MODLIST=@Esseker;"
 
 REM Add your serverside mods here. 
 SET "SEVERSIDEMODS="
