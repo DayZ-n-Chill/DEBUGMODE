@@ -5,7 +5,7 @@ REM Set the source Workshop directory
 SET "WorkshopDir=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!Workshop"
 
 REM Set the target directory on the P drive
-SET "TargetDir=P:\Mods"
+SET "MODDIR=P:\Mods"
 
 REM Check if the P drive is mounted
 IF NOT EXIST "P:\" (
