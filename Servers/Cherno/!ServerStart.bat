@@ -49,21 +49,20 @@ type ..\..\Utils\Batch\Utils\devlogo.txt
 
 SET "MODS="
 SET "MODDIR=P:\Mods"
-SET "WorkshopLink=P:\Mods"
 
 echo.
-powershell -Command "Write-Host 'Checking for the existence of %WorkshopLink%...' -ForegroundColor Cyan"
+powershell -Command "Write-Host 'Checking for the existence of %MODDIR%...' -ForegroundColor Cyan"
 echo.
 
-IF NOT EXIST "%WorkshopLink%" (
-    powershell -Command "Write-Host '%WorkshopLink% does not exist. Checking for %WorkshopDir%...' -ForegroundColor Yellow"
+IF NOT EXIST "%MODDIR%" (
+    powershell -Command "Write-Host '%MODDIR% does not exist. Checking for %WorkshopDir%...' -ForegroundColor Yellow"
     echo.
 
     IF EXIST "%WorkshopDir%" (
         powershell -Command "Write-Host '%WorkshopDir% found. Creating a junction point...' -ForegroundColor Green"
         echo.
 
-        mklink /J "%WorkshopLink%" "%WorkshopDir%"
+        mklink /J "%MODDIR%" "%WorkshopDir%"
 
         IF ERRORLEVEL 1 (
             powershell -Command "Write-Host 'Failed to create junction point. Make sure you have the required permissions.' -ForegroundColor Red"
@@ -77,7 +76,7 @@ IF NOT EXIST "%WorkshopLink%" (
         echo.
     )
 ) ELSE (
-    powershell -Command "Write-Host '%WorkshopLink% already exists.' -ForegroundColor DarkCyan"
+    powershell -Command "Write-Host '%MODDIR% already exists.' -ForegroundColor DarkCyan"
     echo.
 )
 
@@ -85,13 +84,13 @@ IF NOT EXIST "%WorkshopLink%" (
 FOR /F "tokens=1* delims=;" %%a IN ("%MODLIST%") DO (
     SET "MOD=%%a"
     SET "MODLIST=%%b"
-    SET "MOD_FOLDER=!WorkshopLink!\!MOD!"
+    SET "MOD_FOLDER=!MODDIR!\!MOD!"
     SET "MOD_DIR_FOLDER=!MODDIR!\!MOD!"
     IF EXIST "!MOD_DIR_FOLDER!" (
         echo "!MOD!" | findstr /C:" " > nul
         IF NOT ERRORLEVEL 1 (
             SET "NEW_MOD=!MOD: =-!"
-            SET "NEW_MOD_FOLDER=!WorkshopLink!\!NEW_MOD!"
+            SET "NEW_MOD_FOLDER=!MODDIR!\!NEW_MOD!"
             IF NOT EXIST "!NEW_MOD_FOLDER!" (
                 mklink /J "!NEW_MOD_FOLDER!" "!MOD_FOLDER!" > nul
                 IF ERRORLEVEL 1 (
@@ -111,7 +110,7 @@ FOR /F "tokens=1* delims=;" %%a IN ("%MODLIST%") DO (
             )
         ) ELSE (
             SET "MOD_NO_SPACE=!MOD!"
-            echo "!MOD_NO_SPACE!" found in !WorkshopLink!
+            echo "!MOD_NO_SPACE!" found in !MODDIR!
             SET "MODS=!MODS!!MODDIR!\!MOD!;"
         )
     ) ELSE (
