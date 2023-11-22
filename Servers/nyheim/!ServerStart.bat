@@ -27,7 +27,7 @@ REM Set the location of your Steam !Workshop folder. It is currently set to defa
 SET "WorkshopDir=C:\Program Files (x86)\Steam\steamapps\common\DayZ\!Workshop"
 
 REM Set the location of your world
-SET "MISSION=%~d0\DebugMode\Missions\dayzOffline.enoch"
+SET "MISSION=%~d0\DebugMode\Missions\dayzOffline.nyheim"
 
 REM List your mods exactly as they are named in your !Workshop folder.
 REM Example: SET "MODLIST=@CF;@Dabs Framework;@Community-Online-Tools;@BoomLay's Things"
