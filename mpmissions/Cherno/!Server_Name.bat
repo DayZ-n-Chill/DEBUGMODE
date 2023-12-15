@@ -52,7 +52,77 @@ FOR %%D IN ("%GAMEDIR%|DayZ installation directory" "%WORKSHOPDIR%|Steam !Worksh
     )
     ENDLOCAL
 )
+echo.
+powershell -Command "Write-Host 'Checking for the existence of %MODDIR%...' -ForegroundColor Cyan"
+IF NOT EXIST "%MODDIR%" (
+    powershell -Command "Write-Host '%MODDIR% does not exist. Checking for %WorkshopDir%...' -ForegroundColor Yellow"
+    echo.
+
+    IF EXIST "%WorkshopDir%" (
+        powershell -Command "Write-Host '%WorkshopDir% found. Creating a junction point...' -ForegroundColor Green"
+        echo.
+
+        mklink /J "%MODDIR%" "%WorkshopDir%"
+
+        IF ERRORLEVEL 1 (
+            powershell -Command "Write-Host 'Failed to create junction point. Make sure you have the required permissions.' -ForegroundColor Red"
+        ) ELSE (
+            powershell -Command "Write-Host 'Junction point created successfully.' -ForegroundColor DarkGreen"
+        )
+        echo.
+
+    ) ELSE (
+        powershell -Command "Write-Host '%WorkshopDir% does not exist. Please check the path.' -ForegroundColor Red"
+    )
+) ELSE (
+    powershell -Command "Write-Host '%MODDIR% already exists.' -ForegroundColor DarkCyan"
+    echo.
+)
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+:nextmod
+FOR /F "tokens=1* delims=;" %%a IN ("%MODLIST%") DO (
+    SET "MOD=%%a"
+    SET "MODLIST=%%b"
+    SET "MOD_FOLDER=!MODDIR!\!MOD!"
+    SET "MOD_DIR_FOLDER=!MODDIR!\!MOD!"
+    IF EXIST "!MOD_DIR_FOLDER!" (
+        echo "!MOD!" | findstr /C:" " > nul
+        IF NOT ERRORLEVEL 1 (
+            SET "NEW_MOD=!MOD: =-!"
+            SET "NEW_MOD_FOLDER=!MODDIR!\!NEW_MOD!"
+            IF NOT EXIST "!NEW_MOD_FOLDER!" (
+                mklink /J "!NEW_MOD_FOLDER!" "!MOD_FOLDER!" > nul
+                IF ERRORLEVEL 1 (
+                    SET "MOD_ERROR=!MOD!"
+                    echo Failed to create junction for "!MOD_ERROR!". Make sure you have the required permissions. >&2
+                ) ELSE (
+                    SET "MOD_SUCCESS=!MOD!"
+                    powershell -Command "Write-Host 'Junction created successfully.' -ForegroundColor Magenta"
+                    echo "!MOD_SUCCESS!" Successfully linked.
+                    SET "MODS=!MODS!!MODDIR!\!NEW_MOD!;"
+                )
+            ) ELSE (
+                SET "MOD_EXISTS=!MOD!"
+                powershell -Command "Write-Host 'Successfully Loaded.' -ForegroundColor Green"
+                echo "!MOD_EXISTS!" already exists.
+                SET "MODS=!MODS!!MODDIR!\!NEW_MOD!;"
+            )
+        ) ELSE (
+            SET "MOD_NO_SPACE=!MOD!"
+            echo "!MOD_NO_SPACE!" found in !MODDIR!
+            SET "MODS=!MODS!!MODDIR!\!MOD!;"
+        )
+    ) ELSE (
+        SET "MOD_NOT_FOUND=!MOD!"
+        powershell -Command "Write-Host 'Mod not found in "!MODDIR!" - skipping.' -ForegroundColor Red"
+        powershell -Command "Write-Host 'You probably need to download the mod.' -ForegroundColor Blue"
+        echo "!MOD_NOT_FOUND!"
+    )
+)
+IF NOT "!MODLIST!"=="" GOTO nextmod
 pause
+powershell -Command "Write-Host 'Initializing Mods and Starting Chernarus Server' -ForegroundColor DarkCyan"
 cd %GAMEDIR%
-start DayZDiag_x64.exe -mod=%MODS% -profiles=%CLIENTDIAGLOGS% -connect=%LOCALHOST% -battleye=0 -filepatching=1
-start DayZDiag_x64.exe -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODLIST% -serverMod=%SEVERSIDEMODS% -filepatching=1
+start DayZDiag_x64.exe -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=!Profiles -mod=%MODLIST% -serverMod=%SEVERSIDEMODS% -filepatching=1
+start DayZDiag_x64.exe -mod=%MODS% -profiles=!ClientDiagLogs -connect=%LOCALHOST% -battleye=0 -filepatching=1
