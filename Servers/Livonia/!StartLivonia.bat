@@ -44,6 +44,7 @@ SET "PDRIVE=P:\"
 SET "MODDIR=P:\Mods"
 
 REM Checking Directories
+type "..\..\Utils\Batch\Logo\happyHacking.txt"
 FOR %%D IN ("%GAMEDIR%|DayZ installation directory" "%WORKSHOPDIR%|Steam !Workshop directory" "%PDRIVE%|P:\ Drive directory") DO (
     FOR /F "tokens=1,* delims=|" %%A IN ("%%D") DO (
         SET "CURRENT_DIR=%%~A"
