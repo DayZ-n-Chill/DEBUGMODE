@@ -1,23 +1,11 @@
-
-mpmissions/Server_Name/dayzOffline.chernarusplus/storage_1/
-
 *.RPT
 
 *.log
 
-mpmissions/Server_Name/profiles/Users/Survivor/
+Missions/dayzOffline.chernarusplus/storage_1/
 
-mpmissions/Server_Name/profiles/DataCache/
+Missions/dayzOffline.enoch/storage_1/
 
-mpmissions/Server_Name/profiles/Users/twora/
+Servers/Cherno/profiles/Users/
 
-\!ClientDiagLogs/Users/Survivor/
-
-\!ClientDiagLogs/Users/twora/
-
-\!ClientDiagLogs
-
-mpmissions/Cherno/dayzOffline.chernarusplus/storage_1/
-
-mpmissions/Cherno/profiles/Users/
-
+Servers/Livonia/profiles/Users/

@@ -1,0 +1,614 @@
+{
+    "Types": [
+        "",
+        "Camp",
+        "City",
+        "Hill",
+        "Local",
+        "Marine",
+        "Ruin",
+        "Village"
+    ],
+    "Locations": [
+        {
+            "Type": "Village",
+            "Name": "Adamów",
+            "Position": [
+                3076.31005859375,
+                0.0,
+                6851.259765625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Bagno",
+            "Position": [
+                11822.8095703125,
+                0.0,
+                11134.509765625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Bielawa",
+            "Position": [
+                1573.449951171875,
+                0.0,
+                9677.4501953125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Borek",
+            "Position": [
+                9807.490234375,
+                0.0,
+                8495.0703125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Ruin",
+            "Name": "Branzów Castle",
+            "Position": [
+                1072.5400390625,
+                0.0,
+                11418.7802734375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "City",
+            "Name": "Brena",
+            "Position": [
+                6617.6298828125,
+                0.0,
+                11211.0302734375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Dambog",
+            "Position": [
+                577.260009765625,
+                0.0,
+                1124.68994140625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Dolnik",
+            "Position": [
+                11312.3896484375,
+                0.0,
+                655.72998046875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Drewniki",
+            "Position": [
+                5834.72021484375,
+                0.0,
+                5092.89013671875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Gieraltów",
+            "Position": [
+                11240.01953125,
+                0.0,
+                4380.3701171875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Gliniska",
+            "Position": [
+                4992.6201171875,
+                0.0,
+                9921.740234375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Grabin",
+            "Position": [
+                10666.2197265625,
+                0.0,
+                11025.5703125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Marine",
+            "Name": "Grabinskie",
+            "Position": [
+                11249.240234375,
+                0.0,
+                10993.2099609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Hedryków",
+            "Position": [
+                4512.97998046875,
+                0.0,
+                4795.509765625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Hrud",
+            "Position": [
+                6452.5,
+                0.0,
+                9371.1298828125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Huta",
+            "Position": [
+                5141.47021484375,
+                0.0,
+                5472.77978515625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Marine",
+            "Name": "Jantar",
+            "Position": [
+                3532.35009765625,
+                0.0,
+                8955.1396484375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Jezurów",
+            "Position": [
+                2097.760009765625,
+                0.0,
+                2355.8701171875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Kamieniołom Maksymilian",
+            "Position": [
+                6512.25,
+                0.0,
+                4847.85986328125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Karlin",
+            "Position": [
+                10072.740234375,
+                0.0,
+                6956.9599609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Kolembrody",
+            "Position": [
+                8416.9501953125,
+                0.0,
+                11981.9296875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Konopki",
+            "Position": [
+                11489.5703125,
+                0.0,
+                2897.929931640625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Kopa",
+            "Position": [
+                5518.81005859375,
+                0.0,
+                8767.6103515625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Krsnik",
+            "Position": [
+                7874.93017578125,
+                0.0,
+                10081.25
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Kulno",
+            "Position": [
+                11150.01953125,
+                0.0,
+                2391.5
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Camp",
+            "Name": "Lawenda",
+            "Position": [
+                813.6500244140625,
+                0.0,
+                8606.33984375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Lembork",
+            "Position": [
+                8680.4697265625,
+                0.0,
+                6635.7001953125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Lipina",
+            "Position": [
+                5941.8701171875,
+                0.0,
+                6820.009765625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Lukow",
+            "Position": [
+                3529.64990234375,
+                0.0,
+                11966.5302734375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Muratyn",
+            "Position": [
+                4567.5,
+                0.0,
+                6384.39990234375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "City",
+            "Name": "Nadbór",
+            "Position": [
+                6109.5,
+                0.0,
+                3983.169921875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Nidek",
+            "Position": [
+                6128.89013671875,
+                0.0,
+                8013.33984375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Olszanka",
+            "Position": [
+                4819.02978515625,
+                0.0,
+                7674.1298828125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Piekło",
+            "Position": [
+                3323.860107421875,
+                0.0,
+                3717.300048828125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Camp",
+            "Name": "Pionier",
+            "Position": [
+                1341.449951171875,
+                0.0,
+                4867.16015625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Piorun",
+            "Position": [
+                645.6099853515625,
+                0.0,
+                12158.599609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Polana",
+            "Position": [
+                3279.610107421875,
+                0.0,
+                2132.14990234375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Camp",
+            "Name": "Potoki",
+            "Position": [
+                11633.8701171875,
+                0.0,
+                1947.199951171875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Ruin",
+            "Name": "Półkrabiec",
+            "Position": [
+                11871.3095703125,
+                0.0,
+                6580.22021484375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Radacz",
+            "Position": [
+                4007.780029296875,
+                0.0,
+                7939.91015625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "City",
+            "Name": "Radunin",
+            "Position": [
+                7298.3798828125,
+                0.0,
+                6491.89990234375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Rodzanica",
+            "Position": [
+                8881.5400390625,
+                0.0,
+                2041.9599609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Roztoka",
+            "Position": [
+                7695.27978515625,
+                0.0,
+                5317.47021484375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Camp",
+            "Name": "Rumianek",
+            "Position": [
+                11775.599609375,
+                0.0,
+                5487.06005859375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Sarnówek",
+            "Position": [
+                3308.06005859375,
+                0.0,
+                4970.25
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Marine",
+            "Name": "Sitnickie",
+            "Position": [
+                11411.91015625,
+                0.0,
+                10439.599609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Sitnik",
+            "Position": [
+                11502.3095703125,
+                0.0,
+                9573.009765625
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Skala",
+            "Position": [
+                2999.25,
+                0.0,
+                1956.0699462890626
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Sobotka",
+            "Position": [
+                6256.93994140625,
+                0.0,
+                10252.919921875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Sowa",
+            "Position": [
+                11662.76953125,
+                0.0,
+                12064.330078125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Hill",
+            "Name": "Swarog",
+            "Position": [
+                4854.97998046875,
+                0.0,
+                2224.27001953125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "City",
+            "Name": "Tarnow",
+            "Position": [
+                9328.3095703125,
+                0.0,
+                10904.7998046875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "City",
+            "Name": "Topolin",
+            "Position": [
+                1858.8199462890626,
+                0.0,
+                7330.8701171875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Tymbark",
+            "Position": [
+                2902.449951171875,
+                0.0,
+                1221.25
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Camp",
+            "Name": "Tymianka",
+            "Position": [
+                11351.73046875,
+                0.0,
+                10062.73046875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Widok",
+            "Position": [
+                10238.5302734375,
+                0.0,
+                2143.580078125
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Marine",
+            "Name": "Wolisko",
+            "Position": [
+                12368.4697265625,
+                0.0,
+                10883.9599609375
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Local",
+            "Name": "Wrzeszcz",
+            "Position": [
+                9043.25,
+                0.0,
+                4438.47998046875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Zalesie",
+            "Position": [
+                896.0800170898438,
+                0.0,
+                5536.1201171875
+            ],
+            "Radius": 4.0
+        },
+        {
+            "Type": "Village",
+            "Name": "Zapadlisko",
+            "Position": [
+                8058.25,
+                0.0,
+                8711.759765625
+            ],
+            "Radius": 4.0
+        }
+    ]
+}
