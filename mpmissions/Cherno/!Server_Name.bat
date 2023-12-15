@@ -123,6 +123,5 @@ FOR /F "tokens=1* delims=;" %%a IN ("%MODLIST%") DO (
 IF NOT "!MODLIST!"=="" GOTO nextmod
 pause
 powershell -Command "Write-Host 'Initializing Mods and Starting Chernarus Server' -ForegroundColor DarkCyan"
-cd %GAMEDIR%
-start DayZDiag_x64.exe -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=!Profiles -mod=%MODLIST% -serverMod=%SEVERSIDEMODS% -filepatching=1
-start DayZDiag_x64.exe -mod=%MODS% -profiles=!ClientDiagLogs -connect=%LOCALHOST% -battleye=0 -filepatching=1
+start "" "%GAMEDIR%\DayZDiag_x64.exe" -mod=%MODS% -profiles=%CLIENTLOGS% -connect=%LOCALHOST% -battylee=0 -filepatching=1
+start "" "%GAMEDIR%\DayZDiag_x64.exe" -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
