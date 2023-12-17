@@ -11,13 +11,7 @@ SET "PROFILES=DEBUGMODE\mpmissions\Server_Name\profiles"
 SET "LOCALHOST=127.0.0.1:2302"
 SET "PDRIVE=P:\"
 SET "MODDIR=P:\Mods"
-@REM cd ../../../
 powershell -Command "Write-Host 'Initializing Mods and Starting Chernarus Server' -ForegroundColor DarkCyan"
-@echo off
-@echo off
-REM Set the isDiag variable here
-
-
 if "%DIAGNOSTICMODE%"=="true" (
     start "" "%DAYZGAMEDIR%\DayZDiag_x64.exe" -mod=%MODS% -profiles=%CLIENTLOGS% -connect=%LOCALHOST% -battylee=0 -filepatching=1
     start "" "%DAYZGAMEDIR%\DayZDiag_x64.exe" -server -noPause -doLogs -mission=%MISSION% -config=%SERVERCFG% -profiles=%PROFILES% -mod=%MODS% -serverMod=%SEVERSIDEMODS% -filepatching=1
